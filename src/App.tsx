@@ -249,6 +249,7 @@ export default function App() {
                 building enterprise-level software.
               </p>
             </div>
+            {/* --- UPDATED EXPERIENCE LIST --- */}
             <div className="space-y-12">
               <div className="experience-item">
                 <div className="experience-dot"></div>
@@ -257,7 +258,25 @@ export default function App() {
                   <h3 className="text-xl font-bold text-white">
                     Staff Software Engineer
                   </h3>
-                  <p className="text-slate-400">Anthology, Chennai</p>
+                  <p className="text-slate-400 mb-4">
+                    Anthology, Chennai, India
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-slate-400">
+                    <li>
+                      Led development on key modules for a large-scale LMS,
+                      enhancing stability and user experience using React.
+                    </li>
+                    <li>
+                      Mentored junior developers and established high standards
+                      for code quality through rigorous code reviews and best
+                      practices.
+                    </li>
+                    <li>
+                      Drove technical architecture decisions and shared
+                      expertise through technical blogs and team-wide training
+                      sessions.
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="experience-item">
@@ -267,7 +286,25 @@ export default function App() {
                   <h3 className="text-xl font-bold text-white">
                     Software Engineer
                   </h3>
-                  <p className="text-slate-400">FULL Creative, Chennai</p>
+                  <p className="text-slate-400 mb-4">
+                    FULL Creative, Chennai, India
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-slate-400">
+                    <li>
+                      Developed and optimized modern single-page applications
+                      for service customers using React and Redux.
+                    </li>
+                    <li>
+                      Architected and built a standardized sign-up module with
+                      React and Spring Boot, improving consistency across all
+                      company products.
+                    </li>
+                    <li>
+                      Contributed to a micro-frontend architecture, integrating
+                      disparate applications into a single cohesive user
+                      experience.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

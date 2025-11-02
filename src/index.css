@@ -29,3 +29,7 @@
 .experience-content {
   @apply ml-4;
 }
+
+.experience-content ul {
+  @apply pl-1;
+}
