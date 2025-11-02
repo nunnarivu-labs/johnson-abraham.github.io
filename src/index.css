@@ -21,11 +21,11 @@
 }
 
 .experience-item {
-    @apply relative pl-8 border-l border-slate-700;
+  @apply relative pl-8 border-l border-slate-700;
 }
 .experience-dot {
-    @apply absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-sky-500;
+  @apply absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-sky-500;
 }
 .experience-content {
-    @apply ml-4;
+  @apply ml-4;
 }
