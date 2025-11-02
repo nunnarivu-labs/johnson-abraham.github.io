@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.tech-tag {
+  @apply inline-block bg-slate-700 text-slate-300 text-xs font-semibold px-3 py-1 rounded-full;
+}
+
+.project-button {
+  @apply inline-flex items-center gap-2 font-semibold text-slate-300 hover:text-sky-400 transition-colors;
+}
+
+.skill-card {
+  @apply bg-slate-800/50 p-8 rounded-lg flex flex-col items-center;
+}
+
+.social-link {
+  @apply text-slate-400 hover:text-sky-400 transition-colors;
+}
+
+.social-link svg {
+  @apply h-6 w-6;
+}
+
+.experience-item {
+    @apply relative pl-8 border-l border-slate-700;
+}
+.experience-dot {
+    @apply absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-sky-500;
+}
+.experience-content {
+    @apply ml-4;
+}
