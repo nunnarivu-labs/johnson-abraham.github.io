@@ -12,11 +12,12 @@ import {
 import ishtarLogo from "./assets/ishtar-logo.png";
 import slateLogo from "./assets/slate-logo.png";
 import profilePhoto from "./assets/profile-photo.jpg";
+import heroBackground from "./assets/hero-background.jpg";
 
 export default function App() {
   return (
     <div className="bg-slate-900 text-slate-300 font-sans leading-relaxed">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
         <div className="container mx-auto flex h-20 items-center justify-between px-6">
           <a href="#" className="text-xl font-bold text-white">
             Johnson Abraham
@@ -39,12 +40,20 @@ export default function App() {
       </header>
 
       <main>
-        <section className="min-h-screen flex items-center pt-20">
-          <div className="container mx-auto text-center px-6">
+        <section className="relative min-h-screen flex items-center justify-center pt-20">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroBackground}
+              alt="A laptop in a dark room with a colorful keyboard."
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-slate-900/70"></div>
+          </div>
+          <div className="relative z-10 container mx-auto text-center px-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
               I build secure, scalable, and user-centric web applications.
             </h1>
-            <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-400">
+            <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-300">
               With 8 years of experience as a full-stack engineer, I specialize
               in React and Java/Spring, delivering high-performance solutions
               from front-end design to back-end architecture.
