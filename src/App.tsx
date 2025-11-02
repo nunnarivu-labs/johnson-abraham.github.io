@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ArrowRight, ExternalLink, Code, Database, Layers } from 'lucide-react';
 
+// --- PLACEHOLDERS: Replace these with your actual logo and photo files ---
 import ishtarLogo from './assets/ishtar-logo.png';
 import slateLogo from './assets/slate-logo.png';
 import profilePhoto from './assets/profile-photo.jpg';
@@ -140,7 +141,8 @@ export default function App() {
               <div className="skill-card">
                 <Layers className="h-8 w-8 text-sky-400 mb-4" />
                 <h3 className="text-xl font-bold text-white">Frontend Development</h3>
-                <p className="text-slate-400 mt-2">React, Redux, Jotai, HTML, AJAX, Jest, Testing Library</p>
+                {/* --- UPDATED SKILLS LIST --- */}
+                <p className="text-slate-400 mt-2">React, Redux, Jotai, MUI, Tailwind CSS, Tanstack (Query, Router, Virtual), Jest, Testing Library</p>
               </div>
               <div className="skill-card">
                 <Code className="h-8 w-8 text-sky-400 mb-4" />
@@ -150,7 +152,8 @@ export default function App() {
               <div className="skill-card">
                 <Database className="h-8 w-8 text-sky-400 mb-4" />
                 <h3 className="text-xl font-bold text-white">Databases & Other</h3>
-                <p className="text-slate-400 mt-2">PostgreSQL, JavaScript, CI/CD, Git</p>
+                 {/* --- UPDATED SKILLS LIST --- */}
+                <p className="text-slate-400 mt-2">PostgreSQL, JavaScript, Tanstack Start, CI/CD, Git</p>
               </div>
             </div>
           </div>
