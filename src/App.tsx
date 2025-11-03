@@ -17,7 +17,7 @@ import heroBackground from "./assets/hero-background.jpg";
 export default function App() {
   return (
     <div className="bg-slate-900 text-slate-300 font-sans leading-relaxed">
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xs ">
         <div className="container mx-auto flex h-20 items-center justify-between px-6">
           <a href="#" className="text-xl font-bold text-white">
             Johnson Abraham
