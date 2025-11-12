@@ -8,11 +8,21 @@ import {
   Database,
   Layers,
 } from "lucide-react";
+import { intervalToDuration } from "date-fns";
 
 import ishtarLogo from "./assets/ishtar-logo.png";
 import slateLogo from "./assets/slate-logo.png";
 import profilePhoto from "./assets/profile-photo.jpg";
 import heroBackground from "./assets/hero-background.jpg";
+
+const experienceDuration = intervalToDuration({
+  start: new Date(2017, 6, 1),
+  end: new Date(),
+});
+
+const experience = parseFloat(
+  `${experienceDuration.years}.${experienceDuration.months}`,
+);
 
 export default function App() {
   return (
@@ -54,9 +64,9 @@ export default function App() {
               I build secure, scalable, and user-centric web applications.
             </h1>
             <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-300">
-              With 8 years of experience as a full-stack engineer, I specialize
+              {`With ${experience} years of experience as a full-stack engineer, I specialize
               in React and Java/Spring, delivering high-performance solutions
-              from front-end design to back-end architecture.
+              from front-end design to back-end architecture.`}
             </p>
             <div className="mt-10">
               <a
