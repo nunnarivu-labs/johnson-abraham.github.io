@@ -115,6 +115,9 @@ export default function App() {
                   <div className="flex flex-wrap gap-2">
                     <span className="tech-tag">React</span>
                     <span className="tech-tag">Firebase</span>
+                    <span className="tech-tag">
+                      Tanstack (Router, Query, Virtual)
+                    </span>
                     <span className="tech-tag">Google Gemini</span>
                     <span className="tech-tag">MUI</span>
                     <span className="tech-tag">CI/CD</span>
@@ -157,12 +160,13 @@ export default function App() {
                     support, and a flexible tag-based organization system.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="tech-tag">Tanstack Start</span>
                     <span className="tech-tag">React</span>
                     <span className="tech-tag">Convex</span>
                     <span className="tech-tag">Clerk</span>
                     <span className="tech-tag">Tailwind CSS</span>
+                    <span className="tech-tag">Google Gemini</span>
                     <span className="tech-tag">Netlify</span>
+                    <span className="tech-tag">Tanstack (Start, Router)</span>
                   </div>
                 </div>
                 <div className="bg-slate-800 p-6 flex items-center justify-between">
@@ -193,7 +197,7 @@ export default function App() {
                       className="h-12 w-12 rounded-md"
                     />
                     <h3 className="text-2xl font-bold text-white">
-                      The Daily Ledger
+                      The Daily Ledger: High-Performance Analytics Dashboard
                     </h3>
                   </div>
                   <p className="text-slate-400 mb-6">
@@ -209,6 +213,10 @@ export default function App() {
                     <span className="tech-tag">PostgreSQL</span>
                     <span className="tech-tag">Tailwind CSS</span>
                     <span className="tech-tag">Drizzle ORM</span>
+                    <span className="tech-tag">Netlify</span>
+                    <span className="tech-tag">
+                      Tanstack (Query, Table, Virtual)
+                    </span>
                   </div>
                 </div>
                 <div className="bg-slate-800 p-6 flex items-center justify-between">
