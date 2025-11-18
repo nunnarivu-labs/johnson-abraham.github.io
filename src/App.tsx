@@ -51,6 +51,7 @@ export default function App() {
       </header>
 
       <main>
+        {/* --- UPDATED INTRODUCTION --- */}
         <section className="relative min-h-screen flex items-center justify-center pt-20">
           <div className="absolute inset-0 z-0">
             <img
@@ -65,9 +66,10 @@ export default function App() {
               I build secure, scalable, and user-centric web applications.
             </h1>
             <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-300">
-              {`With ${experience} years of experience as a full-stack engineer, I specialize
-              in React and Java/Spring, delivering high-performance solutions
-              from front-end design to back-end architecture.`}
+              {`With ${experience} years of experience as a Full-Stack Engineer, I specialize
+              in the Java/Spring and TypeScript/React ecosystems. I architect
+              and deploy scalable, cloud-native applications, from robust
+              serverless backends to dynamic, responsive frontends.`}
             </p>
             <div className="mt-10">
               <a
@@ -155,6 +157,7 @@ export default function App() {
                     support, and a flexible tag-based organization system.
                   </p>
                   <div className="flex flex-wrap gap-2">
+                    <span className="tech-tag">Tanstack Start</span>
                     <span className="tech-tag">React</span>
                     <span className="tech-tag">Convex</span>
                     <span className="tech-tag">Clerk</span>
