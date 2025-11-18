@@ -12,6 +12,7 @@ import { intervalToDuration } from "date-fns";
 
 import ishtarLogo from "./assets/ishtar-logo.png";
 import slateLogo from "./assets/slate-logo.png";
+import dailyLedgerLogo from "./assets/the-daily-ledger-logo.png";
 import profilePhoto from "./assets/profile-photo.jpg";
 import heroBackground from "./assets/hero-background.jpg";
 
@@ -90,7 +91,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-3 gap-12 justify-center">
               <div className="bg-slate-800/50 rounded-lg overflow-hidden flex flex-col group">
                 <div className="p-8 flex-grow">
                   <div className="flex items-center gap-4 mb-4">
@@ -180,6 +181,52 @@ export default function App() {
                   </a>
                 </div>
               </div>
+              <div className="bg-slate-800/50 rounded-lg overflow-hidden flex flex-col group">
+                <div className="p-8 flex-grow">
+                  <div className="flex items-center gap-4 mb-4">
+                    <img
+                      src={dailyLedgerLogo}
+                      alt="The Daily Ledger Logo"
+                      className="h-12 w-12 rounded-md"
+                    />
+                    <h3 className="text-2xl font-bold text-white">
+                      The Daily Ledger
+                    </h3>
+                  </div>
+                  <p className="text-slate-400 mb-6">
+                    A high-performance, full-stack business intelligence
+                    dashboard for an e-commerce store, built to handle massive
+                    datasets with a real-time interface and advanced data
+                    visualization.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="tech-tag">Next.js</span>
+                    <span className="tech-tag">React</span>
+                    <span className="tech-tag">Shadcn/ui</span>
+                    <span className="tech-tag">PostgreSQL</span>
+                    <span className="tech-tag">Tailwind CSS</span>
+                    <span className="tech-tag">Drizzle ORM</span>
+                  </div>
+                </div>
+                <div className="bg-slate-800 p-6 flex items-center justify-between">
+                  <a
+                    href="https://thedailyledger.nunnarivulabs.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-button"
+                  >
+                    Live Demo <ExternalLink className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://github.com/nunnarivu-labs/the-daily-ledger"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-button"
+                  >
+                    View on GitHub <Github className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -232,8 +279,9 @@ export default function App() {
                   Frontend Development
                 </h3>
                 <p className="text-slate-400 mt-2">
-                  React, Redux, Jotai, MUI, Tailwind CSS, Tanstack (Query,
-                  Router, Virtual), Jest, Testing Library
+                  JavaScript (TypeScript), React, Next.js, Redux, Recoil, Jotai,
+                  TanStack Libraries, React Router, MUI, Tailwind CSS, Shadcn,
+                  Jest, Testing Library
                 </p>
               </div>
               <div className="skill-card">
@@ -242,16 +290,18 @@ export default function App() {
                   Backend Development
                 </h3>
                 <p className="text-slate-400 mt-2">
-                  Java, Spring, Spring Boot, API Development
+                  Java, Spring, Spring Boot, Node.js, Serverless Architecture,
+                  API Development, Drizzle ORM
                 </p>
               </div>
               <div className="skill-card">
                 <Database className="h-8 w-8 text-sky-400 mb-4" />
                 <h3 className="text-xl font-bold text-white">
-                  Databases & Other
+                  Cloud, Databases & Tools
                 </h3>
                 <p className="text-slate-400 mt-2">
-                  PostgreSQL, JavaScript, Tanstack Start, CI/CD, Git
+                  GCP, Firebase, Google Cloud Functions, GitHub Actions (CI/CD),
+                  Docker, PostgreSQL, Convex, Git, Clerk, Netlify
                 </p>
               </div>
             </div>
@@ -268,7 +318,6 @@ export default function App() {
                 building enterprise-level software.
               </p>
             </div>
-            {/* --- UPDATED EXPERIENCE LIST --- */}
             <div className="space-y-12">
               <div className="experience-item">
                 <div className="experience-dot"></div>
