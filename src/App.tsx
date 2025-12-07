@@ -256,17 +256,26 @@ export default function App() {
                   About Me
                 </h2>
                 <p className="mb-4 text-slate-400">
-                  I'm a highly skilled Software Engineer passionate about
-                  building impactful solutions. With a strong background in both
-                  front-end and back-end development, I excel at enhancing user
-                  interfaces, optimizing performance, and architecting scalable
-                  applications.
+                  I build software that is fast, scalable, and enjoyable to use.
+                  As a Staff Software Engineer, my career has explored two
+                  areas: the reliable, enterprise-level backends of the Java
+                  ecosystem and the dynamic, user-focused frontends of modern
+                  TypeScript and React.
+                </p>
+                <p className="mb-4 text-slate-400">
+                  What truly excites me is solving puzzles with a big impact. I
+                  enjoy the challenge of taking a complex, slow, or inefficient
+                  system and, through architectural vision and practical coding,
+                  turning it into something simple, fast, and reliable. My
+                  proudest moments are when a solution not only resolves a
+                  customer’s problem but also makes life easier for my entire
+                  engineering team.
                 </p>
                 <p className="text-slate-400">
-                  My experience includes leading development efforts, ensuring
-                  high code quality through best practices, and mentoring team
-                  members. I thrive on solving complex problems and turning
-                  ideas into high-quality, user-centric software.
+                  I believe that the best leaders are also mentors. A
+                  significant part of my role is to share my knowledge, foster a
+                  culture of technical excellence, and introduce innovations
+                  that enable the team to grow.
                 </p>
               </div>
             </div>
@@ -340,20 +349,42 @@ export default function App() {
                   <p className="text-slate-400 mb-4">
                     Anthology, Chennai, India
                   </p>
+                  <p className="text-slate-400 mb-4">
+                    As a Staff Engineer and Tech Lead, my role was to tackle the
+                    company's most complex technical challenges, lead project
+                    delivery, and elevate the engineering standards of the
+                    India-based teams. I focused on architecting for
+                    performance, driving technical strategy, and mentoring the
+                    next generation of engineers.
+                  </p>
                   <ul className="list-disc list-inside space-y-2 text-slate-400">
                     <li>
-                      Led development on key modules for a large-scale LMS,
-                      enhancing stability and user experience using React.
+                      <strong>
+                        Architected a novel sparse-loading data strategy
+                      </strong>{" "}
+                      that solved a critical customer issue by cutting load time
+                      from over 10 minutes to under 2 seconds, a pattern that
+                      was later adopted across the application.
                     </li>
                     <li>
-                      Mentored junior developers and established high standards
-                      for code quality through rigorous code reviews and best
-                      practices.
+                      <strong>Led the strategic adoption of AI</strong>,
+                      designing and prototyping an automated translation
+                      pipeline to replace a costly third-party vendor and
+                      significantly reduce engineering overhead.
                     </li>
                     <li>
-                      Drove technical architecture decisions and shared
-                      expertise through technical blogs and team-wide training
-                      sessions.
+                      <strong>
+                        Served as a key technical advisor and top code reviewer
+                      </strong>
+                      for the India engineering organization, mentoring teams on
+                      performance, UX, and architectural best practices.
+                    </li>
+                    <li>
+                      <strong>
+                        Consistently shipped high-priority features on schedule
+                      </strong>
+                      , taking full ownership of the project lifecycle from
+                      technical planning and estimation to final delivery.
                     </li>
                   </ul>
                 </div>
@@ -368,20 +399,44 @@ export default function App() {
                   <p className="text-slate-400 mb-4">
                     FULL Creative, Chennai, India
                   </p>
+                  <p className="text-slate-400 mb-4">
+                    Joining as a Software Engineer, I quickly grew to take on
+                    significant architectural challenges. My focus was on
+                    modernizing the backend, improving team processes, and
+                    driving the adoption of new technologies to increase
+                    efficiency and code quality. This role is where I built the
+                    foundation for my career as a technical leader.
+                  </p>
                   <ul className="list-disc list-inside space-y-2 text-slate-400">
                     <li>
-                      Developed and optimized modern single-page applications
-                      for service customers using React and Redux.
+                      <strong>
+                        Reduced time-to-market for new brands by over 95%
+                      </strong>{" "}
+                      (from 2 weeks to less than a day) by re-architecting the
+                      backend with a scalable, configuration-driven design.
                     </li>
                     <li>
-                      Architected and built a standardized sign-up module with
-                      React and Spring Boot, improving consistency across all
-                      company products.
+                      <strong>
+                        Built a zero-boilerplate caching layer with Spring AOP
+                      </strong>
+                      that automated caching for all GET APIs, saving countless
+                      hours of redundant work for the development team.
                     </li>
                     <li>
-                      Contributed to a micro-frontend architecture, integrating
-                      disparate applications into a single cohesive user
-                      experience.
+                      <strong>
+                        Led the company-wide push for better unit testing
+                      </strong>
+                      , establishing new standards and running workshops that
+                      created a culture of quality and significantly reduced
+                      bugs in production.
+                    </li>
+                    <li>
+                      <strong>
+                        Pioneered the adoption of modern Java 8 features
+                      </strong>{" "}
+                      and championed the team's transition to React, quickly
+                      mastering the new stack to deliver a production-ready
+                      feature in under two weeks.
                     </li>
                   </ul>
                 </div>
