@@ -464,7 +464,7 @@ export default function App() {
           </div>
           <div className="mt-12 flex justify-center space-x-6">
             <a
-              href="https://github.com/nunnarivu-labs"
+              href="https://github.com/johnson-abraham"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
