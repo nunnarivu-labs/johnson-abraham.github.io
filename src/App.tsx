@@ -451,15 +451,14 @@ export default function App() {
             Let's build something great together.
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-            Have a project in mind or just want to connect? Feel free to send me
-            an email.
+            Have a project in mind or just want to connect?
           </p>
           <div className="mt-8">
             <a
-              href="mailto:johnsonabraham0812@gmail.com"
-              className="inline-flex items-center gap-2 text-lg font-semibold text-sky-400 hover:text-sky-300 transition-colors"
+              href="mailto:johnsonabraham@nunnarivulabs.in"
+              className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-transform hover:scale-105"
             >
-              <Mail className="h-5 w-5" /> johnsonabraham0812@gmail.com
+              <Mail className="h-5 w-5" /> Send me an email
             </a>
           </div>
           <div className="mt-12 flex justify-center space-x-6">
