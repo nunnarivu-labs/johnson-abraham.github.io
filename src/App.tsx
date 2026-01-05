@@ -8,7 +8,6 @@ import {
   Database,
   Layers,
 } from "lucide-react";
-import { intervalToDuration } from "date-fns";
 
 import ishtarLogo from "./assets/ishtar-logo.png";
 import slateLogo from "./assets/slate-logo.png";
@@ -16,14 +15,20 @@ import dailyLedgerLogo from "./assets/the-daily-ledger-logo.png";
 import profilePhoto from "./assets/profile-photo.jpg";
 import heroBackground from "./assets/hero-background.jpg";
 
-const experienceDuration = intervalToDuration({
-  start: new Date(2017, 6, 1),
-  end: new Date(),
-});
+function getExperience() {
+  const start = new Date(2017, 5, 1);
+  const end = new Date();
 
-const experience = parseFloat(
-  `${experienceDuration.years}.${experienceDuration.months}`,
-);
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  return parseFloat(`${years}.${months}`);
+}
 
 export default function App() {
   return (
@@ -66,7 +71,7 @@ export default function App() {
               I build secure, scalable, and user-centric web applications.
             </h1>
             <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-300">
-              {`With ${experience} years of experience as a Full-Stack Engineer, I specialize
+              {`With ${getExperience()} years of experience as a Full-Stack Engineer, I specialize
               in the Java/Spring and TypeScript/React ecosystems. I architect
               and deploy scalable, cloud-native applications, from robust
               serverless backends to dynamic, responsive frontends.`}
