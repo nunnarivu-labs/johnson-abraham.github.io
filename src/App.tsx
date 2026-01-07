@@ -424,8 +424,9 @@ export default function App() {
                       <strong>
                         Built a zero-boilerplate caching layer with Spring AOP
                       </strong>
-                      that automated caching for all GET APIs, saving countless
-                      hours of redundant work for the development team.
+                      &nbsp;that automated caching for all GET APIs, saving
+                      countless hours of redundant work for the development
+                      team.
                     </li>
                     <li>
                       <strong>
@@ -453,10 +454,10 @@ export default function App() {
       <footer id="contact" className="bg-slate-950 py-20 text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Let's build something great together.
+            Thanks for visiting my portfolio.
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-            Have a project in mind or just want to connect?
+            I'm always happy to connect and talk about technology.
           </p>
           <div className="mt-8">
             <a
