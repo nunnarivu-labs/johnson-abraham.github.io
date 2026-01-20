@@ -1,17 +1,37 @@
 @import "tailwindcss";
 
+/* ==================== Tech Tags ==================== */
 .tech-tag {
-  @apply inline-block bg-slate-700 text-slate-300 text-xs font-semibold px-3 py-1 rounded-full;
+  @apply inline-block bg-slate-700 text-slate-300 text-xs font-semibold px-3 py-1 rounded-full transition-all duration-200 hover:bg-sky-500/20 hover:text-sky-300;
+}
+
+/* ==================== Project Cards ==================== */
+.project-card {
+  @apply bg-slate-800/50 rounded-lg overflow-hidden flex flex-col border border-slate-700/50 transition-all duration-300 hover:border-sky-500/30 hover:shadow-xl hover:shadow-sky-500/10 hover:-translate-y-2;
 }
 
 .project-button {
-  @apply inline-flex items-center gap-2 font-semibold text-slate-300 hover:text-sky-400 transition-colors;
+  @apply inline-flex items-center gap-2 font-semibold text-slate-300 hover:text-sky-400 transition-all duration-200 hover:gap-3;
 }
 
+/* ==================== Skill Cards ==================== */
 .skill-card {
   @apply bg-slate-800/50 p-8 rounded-lg flex flex-col items-center;
 }
 
+.skill-card-enhanced {
+  @apply bg-slate-800/50 p-8 rounded-lg flex flex-col items-center border border-slate-700/50 transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-sky-500/5;
+}
+
+.skill-icon-wrapper {
+  @apply mb-4 p-3 rounded-full bg-sky-500/10 transition-all duration-300;
+}
+
+.skill-card-enhanced:hover .skill-icon-wrapper {
+  @apply bg-sky-500/20 scale-110;
+}
+
+/* ==================== Social Links ==================== */
 .social-link {
   @apply text-slate-400 hover:text-sky-400 transition-colors;
 }
@@ -20,6 +40,15 @@
   @apply h-6 w-6;
 }
 
+.social-link-enhanced {
+  @apply text-slate-400 hover:text-sky-400 transition-all duration-300 p-3 rounded-full hover:bg-sky-500/10 hover:scale-110;
+}
+
+.social-link-enhanced svg {
+  @apply h-6 w-6;
+}
+
+/* ==================== Experience Timeline ==================== */
 .experience-item {
   @apply relative pl-8 border-l border-slate-700;
 }
@@ -30,6 +59,107 @@
   @apply ml-4;
 }
 
+.experience-item-enhanced {
+  @apply relative pl-8 border-l-2 border-slate-700 transition-all duration-300 hover:border-sky-500/50;
+}
+
+.experience-dot-enhanced {
+  @apply absolute -left-2.5 top-1 h-5 w-5 rounded-full bg-sky-500 ring-4 ring-sky-500/20 transition-all duration-300;
+}
+
+.experience-item-enhanced:hover .experience-dot-enhanced {
+  @apply ring-sky-500/40 scale-110;
+}
+
 .experience-content ul {
   @apply pl-1;
+}
+
+/* ==================== Nav Link ==================== */
+.nav-link {
+  @apply relative;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  @apply w-full;
+}
+
+/* ==================== Section Pattern ==================== */
+.section-pattern {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(148, 163, 184, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+}
+
+/* ==================== Scroll to Top ==================== */
+.scroll-to-top {
+  @apply fixed bottom-8 right-8 p-3 bg-sky-500 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-sky-600 hover:scale-110 hover:shadow-sky-500/25 z-50;
+}
+
+.scroll-to-top.visible {
+  @apply opacity-100 visible;
+}
+
+/* ==================== Hero Animations ==================== */
+.hero-fade-in {
+  animation: heroFadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.hero-delay-2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== Scroll Animations ==================== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animations for grid items */
+.grid .animate-on-scroll:nth-child(1) {
+  transition-delay: 0s;
+}
+.grid .animate-on-scroll:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.grid .animate-on-scroll:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+/* ==================== Smooth Scroll ==================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==================== Selection ==================== */
+::selection {
+  @apply bg-sky-500/30 text-white;
 }
