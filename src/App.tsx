@@ -177,7 +177,6 @@ export default function App() {
       </div>
 
       <main>
-        {/* --- UPDATED INTRODUCTION --- */}
         <section className="relative min-h-screen flex items-center justify-center pt-20">
           <div className="absolute inset-0 z-0">
             <img
