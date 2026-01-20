@@ -520,8 +520,9 @@ export default function App() {
                       <strong>
                         Served as a key technical advisor and top code reviewer
                       </strong>
-                      for the India engineering organization, mentoring teams on
-                      performance, UX, and architectural best practices.
+                      &nbsp;for the India engineering organization, mentoring
+                      teams on performance, UX, and architectural best
+                      practices.
                     </li>
                     <li>
                       <strong>
