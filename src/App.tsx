@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Github,
   Linkedin,
@@ -7,6 +8,9 @@ import {
   Code,
   Database,
   Layers,
+  Menu,
+  X,
+  ChevronUp,
 } from "lucide-react";
 
 import ishtarLogo from "./assets/ishtar-logo.png";
@@ -30,33 +34,149 @@ function getExperience() {
   return parseFloat(`${years}.${months}`);
 }
 
+const navLinks = [
+  { href: "#projects", label: "Projects" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      setShowScrollTop(window.scrollY > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -60% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
+
+    const sections = document.querySelectorAll("section[id],footer[id]");
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const animateObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+    );
+
+    const animatedElements = document.querySelectorAll(".animate-on-scroll");
+    animatedElements.forEach((el) => animateObserver.observe(el));
+
+    return () => animateObserver.disconnect();
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
     <div className="bg-slate-900 text-slate-300 font-sans leading-relaxed">
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xs ">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-slate-900/95 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
+        }`}
+      >
         <div className="container mx-auto flex h-20 items-center justify-between px-6">
           <a href="#" className="text-xl font-bold text-white">
             Johnson Abraham
           </a>
           <nav className="hidden items-center space-x-8 md:flex">
-            <a
-              href="#projects"
-              className="hover:text-sky-400 transition-colors"
-            >
-              Projects
-            </a>
-            <a href="#about" className="hover:text-sky-400 transition-colors">
-              About
-            </a>
-            <a href="#contact" className="hover:text-sky-400 transition-colors">
-              Contact
-            </a>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`nav-link transition-colors ${
+                  activeSection === link.href.slice(1)
+                    ? "text-sky-400"
+                    : "text-slate-300 hover:text-sky-400"
+                }`}
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
+          <button
+            className="md:hidden text-white p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
         </div>
       </header>
 
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed inset-0 top-20 z-40 bg-slate-900/98 backdrop-blur-lg transition-all duration-300 ${
+          mobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <nav className="flex flex-col items-center justify-center h-full space-y-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={closeMobileMenu}
+              className={`text-2xl font-semibold transition-colors ${
+                activeSection === link.href.slice(1)
+                  ? "text-sky-400"
+                  : "text-white hover:text-sky-400"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
       <main>
-        {/* --- UPDATED INTRODUCTION --- */}
         <section className="relative min-h-screen flex items-center justify-center pt-20">
           <div className="absolute inset-0 z-0">
             <img
@@ -67,28 +187,32 @@ export default function App() {
             <div className="absolute inset-0 bg-slate-900/70"></div>
           </div>
           <div className="relative z-10 container mx-auto text-center px-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight hero-fade-in">
               I build secure, scalable, and user-centric web applications.
             </h1>
-            <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-300">
+            <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-300 hero-fade-in hero-delay-1">
               {`With ${getExperience()} years of experience as a Full-Stack Engineer, I specialize
               in the Java/Spring and TypeScript/React ecosystems. I architect
               and deploy scalable, cloud-native applications, from robust
               serverless backends to dynamic, responsive frontends.`}
             </p>
-            <div className="mt-10">
+            <div className="mt-10 hero-fade-in hero-delay-2">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25 group"
               >
-                View My Work <ArrowRight className="h-5 w-5" />
+                View My Work{" "}
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
         </section>
-        <section id="projects" className="py-20 md:py-32 bg-slate-950">
+        <section
+          id="projects"
+          className="py-20 md:py-32 bg-slate-950 section-pattern"
+        >
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Featured Projects
               </h2>
@@ -99,7 +223,7 @@ export default function App() {
             </div>
 
             <div className="grid lg:grid-cols-3 gap-12 justify-center">
-              <div className="bg-slate-800/50 rounded-lg overflow-hidden flex flex-col group">
+              <div className="project-card animate-on-scroll">
                 <div className="p-8 flex-grow">
                   <div className="flex items-center gap-4 mb-4">
                     <img
@@ -147,7 +271,7 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              <div className="bg-slate-800/50 rounded-lg overflow-hidden flex flex-col group">
+              <div className="project-card animate-on-scroll">
                 <div className="p-8 flex-grow">
                   <div className="flex items-center gap-4 mb-4">
                     <img
@@ -193,7 +317,7 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              <div className="bg-slate-800/50 rounded-lg overflow-hidden flex flex-col group">
+              <div className="project-card animate-on-scroll">
                 <div className="p-8 flex-grow">
                   <div className="flex items-center gap-4 mb-4">
                     <img
@@ -246,17 +370,18 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section id="about" className="py-20 md:py-32">
-          <div className="container mx-auto px-6">
+        <section id="about" className="py-20 md:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800/50"></div>
+          <div className="container mx-auto px-6 relative z-10">
             <div className="grid md:grid-cols-3 gap-12 items-center">
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 animate-on-scroll">
                 <img
                   src={profilePhoto}
                   alt="Johnson Abraham"
-                  className="rounded-lg shadow-2xl w-full"
+                  className="rounded-lg shadow-2xl w-full ring-4 ring-sky-500/20 hover:ring-sky-500/40 transition-all duration-300"
                 />
               </div>
-              <div className="md:col-span-2">
+              <div className="md:col-span-2 animate-on-scroll">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   About Me
                 </h2>
@@ -286,9 +411,12 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section id="skills" className="py-20 md:py-32 bg-slate-950">
+        <section
+          id="skills"
+          className="py-20 md:py-32 bg-slate-950 section-pattern"
+        >
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
                 My Technical Skills
               </h2>
@@ -298,8 +426,10 @@ export default function App() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div className="skill-card">
-                <Layers className="h-8 w-8 text-sky-400 mb-4" />
+              <div className="skill-card-enhanced animate-on-scroll">
+                <div className="skill-icon-wrapper">
+                  <Layers className="h-8 w-8 text-sky-400" />
+                </div>
                 <h3 className="text-xl font-bold text-white">
                   Frontend Development
                 </h3>
@@ -309,8 +439,10 @@ export default function App() {
                   Jest, Testing Library
                 </p>
               </div>
-              <div className="skill-card">
-                <Code className="h-8 w-8 text-sky-400 mb-4" />
+              <div className="skill-card-enhanced animate-on-scroll">
+                <div className="skill-icon-wrapper">
+                  <Code className="h-8 w-8 text-sky-400" />
+                </div>
                 <h3 className="text-xl font-bold text-white">
                   Backend Development
                 </h3>
@@ -319,8 +451,10 @@ export default function App() {
                   API Development, Drizzle ORM
                 </p>
               </div>
-              <div className="skill-card">
-                <Database className="h-8 w-8 text-sky-400 mb-4" />
+              <div className="skill-card-enhanced animate-on-scroll">
+                <div className="skill-icon-wrapper">
+                  <Database className="h-8 w-8 text-sky-400" />
+                </div>
                 <h3 className="text-xl font-bold text-white">
                   Cloud, Databases & Tools
                 </h3>
@@ -332,9 +466,13 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section id="experience" className="py-20 md:py-32">
-          <div className="container mx-auto px-6 max-w-3xl">
-            <div className="text-center mb-16">
+        <section
+          id="experience"
+          className="py-20 md:py-32 relative overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gradient-to-tl from-slate-900 via-slate-900 to-slate-800/50"></div>
+          <div className="container mx-auto px-6 max-w-3xl relative z-10">
+            <div className="text-center mb-16 animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Professional Experience
               </h2>
@@ -344,8 +482,8 @@ export default function App() {
               </p>
             </div>
             <div className="space-y-12">
-              <div className="experience-item">
-                <div className="experience-dot"></div>
+              <div className="experience-item-enhanced animate-on-scroll">
+                <div className="experience-dot-enhanced"></div>
                 <div className="experience-content">
                   <p className="text-sm text-sky-400">AUGUST 2021 - PRESENT</p>
                   <h3 className="text-xl font-bold text-white">
@@ -381,8 +519,9 @@ export default function App() {
                       <strong>
                         Served as a key technical advisor and top code reviewer
                       </strong>
-                      for the India engineering organization, mentoring teams on
-                      performance, UX, and architectural best practices.
+                      &nbsp;for the India engineering organization, mentoring
+                      teams on performance, UX, and architectural best
+                      practices.
                     </li>
                     <li>
                       <strong>
@@ -394,8 +533,8 @@ export default function App() {
                   </ul>
                 </div>
               </div>
-              <div className="experience-item">
-                <div className="experience-dot"></div>
+              <div className="experience-item-enhanced animate-on-scroll">
+                <div className="experience-dot-enhanced"></div>
                 <div className="experience-content">
                   <p className="text-sm text-sky-400">JUNE 2017 - JULY 2021</p>
                   <h3 className="text-xl font-bold text-white">
@@ -451,39 +590,44 @@ export default function App() {
           </div>
         </section>
       </main>
-      <footer id="contact" className="bg-slate-950 py-20 text-center">
+      <footer
+        id="contact"
+        className="bg-slate-950 py-20 text-center section-pattern"
+      >
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Thanks for visiting my portfolio.
-          </h2>
-          <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-            I'm always happy to connect and talk about technology.
-          </p>
-          <div className="mt-8">
-            <a
-              href="mailto:johnsonabraham@nunnarivulabs.in"
-              className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-transform hover:scale-105"
-            >
-              <Mail className="h-5 w-5" /> Send me an email
-            </a>
-          </div>
-          <div className="mt-12 flex justify-center space-x-6">
-            <a
-              href="https://github.com/johnson-abraham"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <Github />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/johnson-abraham/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <Linkedin />
-            </a>
+          <div className="animate-on-scroll">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Thanks for visiting my portfolio.
+            </h2>
+            <p className="mt-4 text-slate-400 max-w-xl mx-auto">
+              I'm always happy to connect and talk about technology.
+            </p>
+            <div className="mt-8">
+              <a
+                href="mailto:johnsonabraham@nunnarivulabs.in"
+                className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25"
+              >
+                <Mail className="h-5 w-5" /> Send me an email
+              </a>
+            </div>
+            <div className="mt-12 flex justify-center space-x-6">
+              <a
+                href="https://github.com/johnson-abraham"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link-enhanced"
+              >
+                <Github />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/johnson-abraham/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link-enhanced"
+              >
+                <Linkedin />
+              </a>
+            </div>
           </div>
           <div className="mt-16 text-slate-500">
             <p>
@@ -493,6 +637,15 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className={`scroll-to-top ${showScrollTop ? "visible" : ""}`}
+        aria-label="Scroll to top"
+      >
+        <ChevronUp className="h-6 w-6" />
+      </button>
     </div>
   );
 }
