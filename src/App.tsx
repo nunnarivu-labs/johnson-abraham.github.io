@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import {
-  Github,
-  Linkedin,
   Mail,
   ArrowRight,
   ExternalLink,
@@ -11,13 +9,16 @@ import {
   Menu,
   X,
   ChevronUp,
-} from "lucide-react";
+} from 'lucide-react';
 
-import ishtarLogo from "./assets/ishtar-logo.png";
-import slateLogo from "./assets/slate-logo.png";
-import dailyLedgerLogo from "./assets/the-daily-ledger-logo.png";
-import profilePhoto from "./assets/profile-photo.jpg";
-import heroBackground from "./assets/hero-background.jpg";
+import ishtarLogo from './assets/ishtar-logo.png';
+import slateLogo from './assets/slate-logo.png';
+import dailyLedgerLogo from './assets/the-daily-ledger-logo.png';
+import profilePhoto from './assets/profile-photo.jpg';
+import heroBackground from './assets/hero-background.jpg';
+
+import { LinkedIn } from './icons/linkedIn.tsx';
+import { Github } from './icons/github.tsx';
 
 function getExperience() {
   const start = new Date(2017, 5, 1);
@@ -35,17 +36,17 @@ function getExperience() {
 }
 
 const navLinks = [
-  { href: "#projects", label: "Projects" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -54,14 +55,14 @@ export default function App() {
       setShowScrollTop(window.scrollY > 500);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -60% 0px",
+      rootMargin: '-20% 0px -60% 0px',
       threshold: 0,
     };
 
@@ -78,7 +79,7 @@ export default function App() {
       observerOptions,
     );
 
-    const sections = document.querySelectorAll("section[id],footer[id]");
+    const sections = document.querySelectorAll('section[id],footer[id]');
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
@@ -89,21 +90,21 @@ export default function App() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in");
+            entry.target.classList.add('animate-in');
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' },
     );
 
-    const animatedElements = document.querySelectorAll(".animate-on-scroll");
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach((el) => animateObserver.observe(el));
 
     return () => animateObserver.disconnect();
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
@@ -113,8 +114,8 @@ export default function App() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-slate-900/95 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
+            ? 'bg-slate-900/95 backdrop-blur-md shadow-lg'
+            : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-6">
@@ -128,8 +129,8 @@ export default function App() {
                 href={link.href}
                 className={`nav-link transition-colors ${
                   activeSection === link.href.slice(1)
-                    ? "text-sky-400"
-                    : "text-slate-300 hover:text-sky-400"
+                    ? 'text-sky-400'
+                    : 'text-slate-300 hover:text-sky-400'
                 }`}
               >
                 {link.label}
@@ -154,8 +155,8 @@ export default function App() {
       <div
         className={`md:hidden fixed inset-0 top-20 z-40 bg-slate-900/98 backdrop-blur-lg transition-all duration-300 ${
           mobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
       >
         <nav className="flex flex-col items-center justify-center h-full space-y-8">
@@ -166,8 +167,8 @@ export default function App() {
               onClick={closeMobileMenu}
               className={`text-2xl font-semibold transition-colors ${
                 activeSection === link.href.slice(1)
-                  ? "text-sky-400"
-                  : "text-white hover:text-sky-400"
+                  ? 'text-sky-400'
+                  : 'text-white hover:text-sky-400'
               }`}
             >
               {link.label}
@@ -201,7 +202,7 @@ export default function App() {
                 href="#projects"
                 className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25 group"
               >
-                View My Work{" "}
+                View My Work{' '}
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -267,7 +268,7 @@ export default function App() {
                     rel="noopener noreferrer"
                     className="project-button"
                   >
-                    View on GitHub <Github className="h-4 w-4" />
+                    View on GitHub <Github classes="h-4 w-4" />
                   </a>
                 </div>
               </div>
@@ -313,7 +314,7 @@ export default function App() {
                     rel="noopener noreferrer"
                     className="project-button"
                   >
-                    View on GitHub <Github className="h-4 w-4" />
+                    View on GitHub <Github classes="h-4 w-4" />
                   </a>
                 </div>
               </div>
@@ -363,7 +364,7 @@ export default function App() {
                     rel="noopener noreferrer"
                     className="project-button"
                   >
-                    View on GitHub <Github className="h-4 w-4" />
+                    View on GitHub <Github classes="h-4 w-4" />
                   </a>
                 </div>
               </div>
@@ -504,7 +505,7 @@ export default function App() {
                     <li>
                       <strong>
                         Architected a novel sparse-loading data strategy
-                      </strong>{" "}
+                      </strong>{' '}
                       that solved a critical customer issue by cutting load time
                       from over 10 minutes to under 2 seconds, a pattern that
                       was later adopted across the application.
@@ -555,7 +556,7 @@ export default function App() {
                     <li>
                       <strong>
                         Reduced time-to-market for new brands by over 95%
-                      </strong>{" "}
+                      </strong>{' '}
                       (from 2 weeks to less than a day) by re-architecting the
                       backend with a scalable, configuration-driven design.
                     </li>
@@ -578,7 +579,7 @@ export default function App() {
                     <li>
                       <strong>
                         Pioneered the adoption of modern Java 8 features
-                      </strong>{" "}
+                      </strong>{' '}
                       and championed the team's transition to React, quickly
                       mastering the new stack to deliver a production-ready
                       feature in under two weeks.
@@ -625,7 +626,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="social-link-enhanced"
               >
-                <Linkedin />
+                <LinkedIn />
               </a>
             </div>
           </div>
@@ -641,7 +642,7 @@ export default function App() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`scroll-to-top ${showScrollTop ? "visible" : ""}`}
+        className={`scroll-to-top ${showScrollTop ? 'visible' : ''}`}
         aria-label="Scroll to top"
       >
         <ChevronUp className="h-6 w-6" />

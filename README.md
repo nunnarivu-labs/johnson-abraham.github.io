@@ -5,12 +5,14 @@ A modern, responsive portfolio website showcasing my professional experience, pr
 **Live Site:** [https://johnsonabraham.nunnarivulabs.in](https://johnsonabraham.nunnarivulabs.in)
 
 ## Tech Stack
+
 - **Framework:** React 19 with TypeScript
 - **Build Tool:** Vite (using rolldown-vite for faster builds)
 - **Styling:** Tailwind CSS v4
 - **Icons:** lucide-react
 
 ## Features
+
 - Single-page application with smooth navigation
 - Responsive design optimized for all screen sizes
 - Dynamic experience calculation (auto-updates years of experience)
@@ -19,6 +21,7 @@ A modern, responsive portfolio website showcasing my professional experience, pr
 - Skills organized by category (Frontend, Backend, Cloud/Tools)
 
 ## License
+
 This project is for personal use. Feel free to use it as inspiration for your own portfolio.
 
 ## Contact
