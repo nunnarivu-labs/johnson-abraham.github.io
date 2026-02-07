@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import {
   Mail,
   ArrowRight,
-  ExternalLink,
   Code,
   Database,
   Layers,
@@ -253,15 +252,7 @@ export default function App() {
                     <span className="tech-tag">CI/CD</span>
                   </div>
                 </div>
-                <div className="bg-slate-800 p-6 flex items-center justify-between">
-                  <a
-                    href="https://ishtar.nunnarivulabs.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-button"
-                  >
-                    Live Demo <ExternalLink className="h-4 w-4" />
-                  </a>
+                <div className="bg-slate-800 p-6 flex items-center justify-center">
                   <a
                     href="https://github.com/nunnarivu-labs/ishtar"
                     target="_blank"
@@ -299,15 +290,7 @@ export default function App() {
                     <span className="tech-tag">Tanstack (Start, Router)</span>
                   </div>
                 </div>
-                <div className="bg-slate-800 p-6 flex items-center justify-between">
-                  <a
-                    href="https://slate.nunnarivulabs.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-button"
-                  >
-                    Live Demo <ExternalLink className="h-4 w-4" />
-                  </a>
+                <div className="bg-slate-800 p-6 flex items-center justify-center">
                   <a
                     href="https://github.com/nunnarivu-labs/slate-web"
                     target="_blank"
@@ -349,15 +332,7 @@ export default function App() {
                     </span>
                   </div>
                 </div>
-                <div className="bg-slate-800 p-6 flex items-center justify-between">
-                  <a
-                    href="https://thedailyledger.nunnarivulabs.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-button"
-                  >
-                    Live Demo <ExternalLink className="h-4 w-4" />
-                  </a>
+                <div className="bg-slate-800 p-6 flex items-center justify-center">
                   <a
                     href="https://github.com/nunnarivu-labs/the-daily-ledger"
                     target="_blank"
