@@ -197,10 +197,7 @@ export default function App() {
               serverless backends to dynamic, responsive frontends.`}
             </p>
             <div className="mt-10 hero-fade-in hero-delay-2">
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25 group"
-              >
+              <a className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25 group">
                 View My Work{' '}
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -224,7 +221,7 @@ export default function App() {
 
             <div className="grid lg:grid-cols-3 gap-12 justify-center">
               <div className="project-card animate-on-scroll">
-                <div className="p-8 flex-grow">
+                <div className="p-8 grow">
                   <div className="flex items-center gap-4 mb-4">
                     <img
                       src={ishtarLogo}
@@ -264,7 +261,7 @@ export default function App() {
                 </div>
               </div>
               <div className="project-card animate-on-scroll">
-                <div className="p-8 flex-grow">
+                <div className="p-8 grow">
                   <div className="flex items-center gap-4 mb-4">
                     <img
                       src={slateLogo}
@@ -302,7 +299,7 @@ export default function App() {
                 </div>
               </div>
               <div className="project-card animate-on-scroll">
-                <div className="p-8 flex-grow">
+                <div className="p-8 grow">
                   <div className="flex items-center gap-4 mb-4">
                     <img
                       src={dailyLedgerLogo}
@@ -347,7 +344,7 @@ export default function App() {
           </div>
         </section>
         <section id="about" className="py-20 md:py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800/50"></div>
+          <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-slate-900 to-slate-800/50"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid md:grid-cols-3 gap-12 items-center">
               <div className="md:col-span-1 animate-on-scroll">
@@ -446,7 +443,7 @@ export default function App() {
           id="experience"
           className="py-20 md:py-32 relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-tl from-slate-900 via-slate-900 to-slate-800/50"></div>
+          <div className="absolute inset-0 bg-linear-to-tl from-slate-900 via-slate-900 to-slate-800/50"></div>
           <div className="container mx-auto px-6 max-w-3xl relative z-10">
             <div className="text-center mb-16 animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
