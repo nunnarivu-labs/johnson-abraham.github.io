@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Code, Database, Layers, Menu, X, ChevronUp } from 'lucide-react';
+import { Menu, X, ChevronUp } from 'lucide-react';
 
 import ishtarLogo from './assets/ishtar-logo.png';
 import slateLogo from './assets/slate-logo.png';
@@ -11,6 +11,7 @@ import { navLinks } from './utils.ts';
 import { Header } from './components/sections/header.tsx';
 import { About } from './components/sections/about.tsx';
 import { ContactFooter } from './components/sections/contact-footer.tsx';
+import { Skills } from './components/sections/skills.tsx';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -288,61 +289,7 @@ export default function App() {
           </div>
         </section>
         <About />
-        <section
-          id="skills"
-          className="py-20 md:py-32 bg-slate-950 section-pattern"
-        >
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16 animate-on-scroll">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                My Technical Skills
-              </h2>
-              <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-                I have a broad range of experience across the stack. Here are
-                some of the key technologies I work with.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div className="skill-card-enhanced animate-on-scroll">
-                <div className="skill-icon-wrapper">
-                  <Layers className="h-8 w-8 text-sky-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white">
-                  Frontend Development
-                </h3>
-                <p className="text-slate-400 mt-2">
-                  JavaScript (TypeScript), React, Next.js, Redux, Recoil, Jotai,
-                  TanStack Libraries, React Router, MUI, Tailwind CSS, Shadcn,
-                  Jest, Testing Library
-                </p>
-              </div>
-              <div className="skill-card-enhanced animate-on-scroll">
-                <div className="skill-icon-wrapper">
-                  <Code className="h-8 w-8 text-sky-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white">
-                  Backend Development
-                </h3>
-                <p className="text-slate-400 mt-2">
-                  Java, Spring, Spring Boot, Node.js, Serverless Architecture,
-                  API Development, Drizzle ORM
-                </p>
-              </div>
-              <div className="skill-card-enhanced animate-on-scroll">
-                <div className="skill-icon-wrapper">
-                  <Database className="h-8 w-8 text-sky-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white">
-                  Cloud, Databases & Tools
-                </h3>
-                <p className="text-slate-400 mt-2">
-                  GCP, Firebase, Google Cloud Functions, GitHub Actions (CI/CD),
-                  Docker, PostgreSQL, Convex, Git, Clerk, Netlify
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Skills />
         <Experience />
       </main>
       <ContactFooter />
