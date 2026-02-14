@@ -2,7 +2,7 @@ import { ExperienceWrapper } from './experience-wrapper.tsx';
 import { Anthology } from './anthology.tsx';
 import { FullCreative } from './full-creative.tsx';
 
-export const ExperienceSection = () => (
+export const Experience = () => (
   <section id="experience" className="py-20 md:py-32 relative overflow-hidden">
     <div className="absolute inset-0 bg-linear-to-tl from-slate-900 via-slate-900 to-slate-800/50"></div>
     <div className="container mx-auto px-6 max-w-3xl relative z-10">

@@ -6,7 +6,7 @@ import slateLogo from './assets/slate-logo.png';
 import dailyLedgerLogo from './assets/the-daily-ledger-logo.png';
 
 import { Github } from './icons/github.tsx';
-import { ExperienceSection } from './components/sections/experience/experience-section.tsx';
+import { Experience } from './components/sections/experience/experience.tsx';
 import { navLinks } from './utils.ts';
 import { Header } from './components/sections/header.tsx';
 import { About } from './components/sections/about.tsx';
@@ -343,7 +343,7 @@ export default function App() {
             </div>
           </div>
         </section>
-        <ExperienceSection />
+        <Experience />
       </main>
       <ContactFooter />
       {/* Scroll to Top Button */}
