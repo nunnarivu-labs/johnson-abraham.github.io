@@ -1,17 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronUp } from 'lucide-react';
 
-import ishtarLogo from './assets/ishtar-logo.png';
-import slateLogo from './assets/slate-logo.png';
-import dailyLedgerLogo from './assets/the-daily-ledger-logo.png';
-
-import { Github } from './icons/github.tsx';
 import { Experience } from './components/sections/experience/experience.tsx';
 import { navLinks } from './utils.ts';
 import { Header } from './components/sections/header.tsx';
 import { About } from './components/sections/about.tsx';
 import { ContactFooter } from './components/sections/contact-footer.tsx';
 import { Skills } from './components/sections/skills.tsx';
+import { Projects } from './components/sections/projects.tsx';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -149,145 +145,7 @@ export default function App() {
 
       <main>
         <Header />
-        <section
-          id="projects"
-          className="py-20 md:py-32 bg-slate-950 section-pattern"
-        >
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16 animate-on-scroll">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Featured Projects
-              </h2>
-              <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-                A selection of my personal projects that showcase my skills in
-                building full-stack applications from concept to deployment.
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-3 gap-12 justify-center">
-              <div className="project-card animate-on-scroll">
-                <div className="p-8 grow">
-                  <div className="flex items-center gap-4 mb-4">
-                    <img
-                      src={ishtarLogo}
-                      alt="Ishtar Logo"
-                      className="h-12 w-12 rounded-md"
-                    />
-                    <h3 className="text-2xl font-bold text-white">
-                      Ishtar: AI Chat Application
-                    </h3>
-                  </div>
-                  <p className="text-slate-400 mb-6">
-                    A full-stack, multimodal AI chat application that analyzes
-                    images, queries PDFs, and generates images using Google
-                    Gemini, featuring a secure serverless backend with a
-                    production-grade rate-limiting system.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="tech-tag">React</span>
-                    <span className="tech-tag">Firebase</span>
-                    <span className="tech-tag">
-                      Tanstack (Router, Query, Virtual)
-                    </span>
-                    <span className="tech-tag">Google Gemini</span>
-                    <span className="tech-tag">MUI</span>
-                    <span className="tech-tag">CI/CD</span>
-                  </div>
-                </div>
-                <div className="bg-slate-800 p-6 flex items-center justify-center">
-                  <a
-                    href="https://github.com/nunnarivu-labs/ishtar"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-button"
-                  >
-                    View on GitHub <Github classes="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-              <div className="project-card animate-on-scroll">
-                <div className="p-8 grow">
-                  <div className="flex items-center gap-4 mb-4">
-                    <img
-                      src={slateLogo}
-                      alt="Slate Logo"
-                      className="h-12 w-12 rounded-md"
-                    />
-                    <h3 className="text-2xl font-bold text-white">
-                      Slate: Note-Taking App
-                    </h3>
-                  </div>
-                  <p className="text-slate-400 mb-6">
-                    A modern note-taking app inspired by Google Keep, built with
-                    a real-time database for seamless syncing, rich Markdown
-                    support, and a flexible tag-based organization system.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="tech-tag">React</span>
-                    <span className="tech-tag">Convex</span>
-                    <span className="tech-tag">Clerk</span>
-                    <span className="tech-tag">Tailwind CSS</span>
-                    <span className="tech-tag">Google Gemini</span>
-                    <span className="tech-tag">Netlify</span>
-                    <span className="tech-tag">Tanstack (Start, Router)</span>
-                  </div>
-                </div>
-                <div className="bg-slate-800 p-6 flex items-center justify-center">
-                  <a
-                    href="https://github.com/nunnarivu-labs/slate-web"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-button"
-                  >
-                    View on GitHub <Github classes="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-              <div className="project-card animate-on-scroll">
-                <div className="p-8 grow">
-                  <div className="flex items-center gap-4 mb-4">
-                    <img
-                      src={dailyLedgerLogo}
-                      alt="The Daily Ledger Logo"
-                      className="h-12 w-12 rounded-md"
-                    />
-                    <h3 className="text-2xl font-bold text-white">
-                      The Daily Ledger: High-Performance Analytics Dashboard
-                    </h3>
-                  </div>
-                  <p className="text-slate-400 mb-6">
-                    A high-performance, full-stack business intelligence
-                    dashboard for an e-commerce store, built to handle massive
-                    datasets with a real-time interface and advanced data
-                    visualization.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="tech-tag">Next.js</span>
-                    <span className="tech-tag">React</span>
-                    <span className="tech-tag">Shadcn/ui</span>
-                    <span className="tech-tag">PostgreSQL</span>
-                    <span className="tech-tag">Tailwind CSS</span>
-                    <span className="tech-tag">Drizzle ORM</span>
-                    <span className="tech-tag">Netlify</span>
-                    <span className="tech-tag">
-                      Tanstack (Query, Table, Virtual)
-                    </span>
-                  </div>
-                </div>
-                <div className="bg-slate-800 p-6 flex items-center justify-center">
-                  <a
-                    href="https://github.com/nunnarivu-labs/the-daily-ledger"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-button"
-                  >
-                    View on GitHub <Github classes="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Projects />
         <About />
         <Skills />
         <Experience />
