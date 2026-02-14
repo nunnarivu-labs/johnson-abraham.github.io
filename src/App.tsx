@@ -18,7 +18,7 @@ import heroBackground from './assets/hero-background.jpg';
 
 import { LinkedIn } from './icons/linkedIn.tsx';
 import { Github } from './icons/github.tsx';
-import { ExperienceSection } from './components/experience/experience-section.tsx';
+import { ExperienceSection } from './components/sections/experience/experience-section.tsx';
 import { getExperience, navLinks } from './utils.ts';
 
 export default function App() {
