@@ -19,29 +19,7 @@ import heroBackground from './assets/hero-background.jpg';
 import { LinkedIn } from './icons/linkedIn.tsx';
 import { Github } from './icons/github.tsx';
 import { ExperienceSection } from './components/experience/experience-section.tsx';
-
-function getExperience() {
-  const start = new Date(2017, 5, 1);
-  const end = new Date();
-
-  let years = end.getFullYear() - start.getFullYear();
-  let months = end.getMonth() - start.getMonth();
-
-  if (months < 0) {
-    years--;
-    months += 12;
-  }
-
-  return parseFloat(`${years}.${months}`);
-}
-
-const navLinks = [
-  { href: '#projects', label: 'Projects' },
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#contact', label: 'Contact' },
-];
+import { getExperience, navLinks } from './utils.ts';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
