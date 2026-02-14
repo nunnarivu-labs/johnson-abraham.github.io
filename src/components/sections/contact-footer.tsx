@@ -2,7 +2,7 @@ import { Mail } from 'lucide-react';
 import { Github } from '../../icons/github.tsx';
 import { LinkedIn } from '../../icons/linkedIn.tsx';
 
-export const Footer = () => (
+export const ContactFooter = () => (
   <footer
     id="contact"
     className="bg-slate-950 py-20 text-center section-pattern"

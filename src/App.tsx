@@ -10,7 +10,7 @@ import { ExperienceSection } from './components/sections/experience/experience-s
 import { navLinks } from './utils.ts';
 import { Header } from './components/sections/header.tsx';
 import { About } from './components/sections/about.tsx';
-import { Footer } from './components/sections/footer.tsx';
+import { ContactFooter } from './components/sections/contact-footer.tsx';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -345,7 +345,7 @@ export default function App() {
         </section>
         <ExperienceSection />
       </main>
-      <Footer />
+      <ContactFooter />
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
