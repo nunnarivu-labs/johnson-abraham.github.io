@@ -1,4 +1,4 @@
-export function getExperience() {
+export function getExperience(): number {
   const start = new Date(2017, 5, 1);
   const end = new Date();
 
@@ -13,7 +13,12 @@ export function getExperience() {
   return parseFloat(`${years}.${months}`);
 }
 
-export const navLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+export const navLinks: NavLink[] = [
   { href: '#projects', label: 'Projects' },
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
