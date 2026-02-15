@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronUp } from 'lucide-react';
 
-import { Experience } from './components/sections/experience/experience.tsx';
+import { Experience } from './components/sections/experience.tsx';
 import { navLinks } from './utils.ts';
 import { Header } from './components/sections/header.tsx';
 import { About } from './components/sections/about.tsx';
