@@ -5,7 +5,7 @@ import { Experience } from './components/sections/experience.tsx';
 import { navLinks } from './utils.ts';
 import { Intro } from './components/sections/intro.tsx';
 import { About } from './components/sections/about.tsx';
-import { ContactFooter } from './components/sections/contact-footer.tsx';
+import { ContactFooter } from './components/contact-footer.tsx';
 import { Skills } from './components/sections/skills.tsx';
 import { Projects } from './components/sections/projects.tsx';
 

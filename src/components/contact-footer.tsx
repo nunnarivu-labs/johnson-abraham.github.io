@@ -1,6 +1,6 @@
 import { Mail } from 'lucide-react';
-import { Github } from '../../icons/github.tsx';
-import { LinkedIn } from '../../icons/linkedIn.tsx';
+import { Github } from '../icons/github.tsx';
+import { LinkedIn } from '../icons/linkedIn.tsx';
 
 export const ContactFooter = () => (
   <footer
