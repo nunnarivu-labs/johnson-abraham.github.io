@@ -3,7 +3,7 @@ import { Menu, X, ChevronUp } from 'lucide-react';
 
 import { Experience } from './components/sections/experience.tsx';
 import { navLinks } from './utils.ts';
-import { Header } from './components/sections/header.tsx';
+import { Intro } from './components/sections/intro.tsx';
 import { About } from './components/sections/about.tsx';
 import { ContactFooter } from './components/sections/contact-footer.tsx';
 import { Skills } from './components/sections/skills.tsx';
@@ -144,7 +144,7 @@ export default function App() {
       </div>
 
       <main>
-        <Header />
+        <Intro />
         <Projects />
         <About />
         <Skills />

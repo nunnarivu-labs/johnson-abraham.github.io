@@ -2,7 +2,7 @@ import heroBackground from '../../assets/hero-background.jpg';
 import { getExperience } from '../../utils.ts';
 import { ArrowRight } from 'lucide-react';
 
-export const Header = () => (
+export const Intro = () => (
   <section className="relative min-h-screen flex items-center justify-center pt-20">
     <div className="absolute inset-0 z-0">
       <img
