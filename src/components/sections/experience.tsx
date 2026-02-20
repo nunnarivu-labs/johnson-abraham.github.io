@@ -4,6 +4,7 @@ interface ExperienceItem {
   duration: string;
   designation: string;
   company: string;
+  location: string;
   content: ReactNode;
 }
 
@@ -39,6 +40,14 @@ const AnthologyContent = () => (
         and estimation to final delivery.
       </li>
     </ul>
+  </>
+);
+
+const DevRevContent = () => (
+  <>
+    <p className="text-slate-400 mb-4">
+      Joined DevRev on the DevExt team as a Member of Technical Staff.
+    </p>
   </>
 );
 
@@ -78,15 +87,24 @@ const FullCreativeContent = () => (
 
 const experiences: ExperienceItem[] = [
   {
+    duration: 'FEBRUARY 2026 - PRESENT',
+    designation: 'Member of Technical Staff',
+    company: 'DevRev',
+    location: 'Chennai, India',
+    content: <DevRevContent />,
+  },
+  {
     duration: 'AUGUST 2021 - FEBRUARY 2026',
     designation: 'Staff Software Engineer',
-    company: 'Anthology, Chennai, India',
+    company: 'Anthology',
+    location: 'Chennai, India',
     content: <AnthologyContent />,
   },
   {
     duration: 'JUNE 2017 - JULY 2021',
     designation: 'Software Engineer',
-    company: 'FULL Creative, Chennai, India',
+    company: 'FULL Creative',
+    location: 'Chennai, India',
     content: <FullCreativeContent />,
   },
 ];
@@ -95,6 +113,7 @@ const ExperienceCard = ({
   duration,
   designation,
   company,
+  location,
   content,
 }: ExperienceItem) => (
   <div className="experience-item-enhanced animate-on-scroll">
@@ -102,7 +121,10 @@ const ExperienceCard = ({
     <div className="experience-content">
       <p className="text-sm text-sky-400">{duration}</p>
       <h3 className="text-xl font-bold text-white">{designation}</h3>
-      <p className="text-slate-400 mb-4">{company}</p>
+      <p className="text-slate-400 mb-4">
+        <span className="font-semibold text-white">{company}</span>
+        <span className="text-slate-400"> — {location}</span>
+      </p>
       {content}
     </div>
   </div>
