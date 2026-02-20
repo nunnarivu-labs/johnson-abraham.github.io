@@ -42,6 +42,14 @@ const AnthologyContent = () => (
   </>
 );
 
+const DevRevContent = () => (
+  <>
+    <p className="text-slate-400 mb-4">
+      Joined DevRev on the DevExt team as a Member of Technical Staff.
+    </p>
+  </>
+);
+
 const FullCreativeContent = () => (
   <>
     <p className="text-slate-400 mb-4">
@@ -77,6 +85,12 @@ const FullCreativeContent = () => (
 );
 
 const experiences: ExperienceItem[] = [
+  {
+    duration: 'FEBRUARY 2026 - PRESENT',
+    designation: 'Member of Technical Staff',
+    company: 'DevRev, Chennai, India',
+    content: <DevRevContent />,
+  },
   {
     duration: 'AUGUST 2021 - FEBRUARY 2026',
     designation: 'Staff Software Engineer',
