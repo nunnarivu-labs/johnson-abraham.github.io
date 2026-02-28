@@ -1,5 +1,5 @@
 import heroBackground from '../../assets/hero-background.jpg';
-import { getExperience } from '../../utils.ts';
+import { getExperience, PROJECTS_HREF } from '../../utils.ts';
 import { ArrowRight } from 'lucide-react';
 
 export const Intro = () => (
@@ -23,7 +23,10 @@ export const Intro = () => (
               serverless backends to dynamic, responsive frontends.`}
       </p>
       <div className="mt-10 hero-fade-in hero-delay-2">
-        <a className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25 group">
+        <a
+          className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25 group"
+          href={PROJECTS_HREF}
+        >
           View My Work{' '}
           <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
         </a>

@@ -18,8 +18,10 @@ interface NavLink {
   label: string;
 }
 
+export const PROJECTS_HREF = '#projects';
+
 export const navLinks: NavLink[] = [
-  { href: '#projects', label: 'Projects' },
+  { href: PROJECTS_HREF, label: 'Projects' },
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
