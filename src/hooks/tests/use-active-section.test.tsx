@@ -25,7 +25,7 @@ describe('useActiveSection', () => {
           {
             isIntersecting: true,
             target: about,
-          } as IntersectionObserverEntry,
+          } as unknown as IntersectionObserverEntry,
         ],
         observer,
       );

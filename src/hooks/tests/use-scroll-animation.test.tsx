@@ -31,7 +31,7 @@ describe('useScrollAnimation', () => {
           {
             isIntersecting: true,
             target: animated,
-          } as IntersectionObserverEntry,
+          } as unknown as IntersectionObserverEntry,
         ],
         observer,
       );
