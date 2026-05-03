@@ -1,6 +1,6 @@
-import ishtarLogo from '../../assets/ishtar-logo.png';
-import slateLogo from '../../assets/slate-logo.png';
-import dailyLedgerLogo from '../../assets/the-daily-ledger-logo.png';
+import ishtarLogo from '../../assets/ishtar-logo.webp';
+import slateLogo from '../../assets/slate-logo.webp';
+import dailyLedgerLogo from '../../assets/the-daily-ledger-logo.webp';
 import { ArrowUpRight } from 'lucide-react';
 
 interface Project {
@@ -81,7 +81,12 @@ const ProjectCard = ({
       <div className="project-card-shine"></div>
       <div className="grow p-7">
         <div className="mb-6 flex items-start justify-between gap-4">
-          <img src={logo} alt={logoAlt} className="h-14 w-14 rounded-xl" />
+          <img
+            src={logo}
+            alt={logoAlt}
+            className="h-14 w-14 rounded-xl"
+            loading="lazy"
+          />
           <a
             href={githubUrl}
             target="_blank"

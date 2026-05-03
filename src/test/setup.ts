@@ -55,10 +55,14 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-vi.mock('../assets/hero-background.jpg', () => ({ default: 'hero-background.jpg' }));
-vi.mock('../assets/profile-photo.jpg', () => ({ default: 'profile-photo.jpg' }));
-vi.mock('../assets/ishtar-logo.png', () => ({ default: 'ishtar-logo.png' }));
-vi.mock('../assets/slate-logo.png', () => ({ default: 'slate-logo.png' }));
-vi.mock('../assets/the-daily-ledger-logo.png', () => ({
-  default: 'the-daily-ledger-logo.png',
+vi.mock('../assets/hero-background.jpg', () => ({
+  default: 'hero-background.jpg',
+}));
+vi.mock('../assets/profile-photo.jpg', () => ({
+  default: 'profile-photo.jpg',
+}));
+vi.mock('../assets/ishtar-logo.webp', () => ({ default: 'ishtar-logo.webp' }));
+vi.mock('../assets/slate-logo.webp', () => ({ default: 'slate-logo.webp' }));
+vi.mock('../assets/the-daily-ledger-logo.webp', () => ({
+  default: 'the-daily-ledger-logo.webp',
 }));
