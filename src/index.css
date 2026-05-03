@@ -52,7 +52,7 @@
 
 /* ==================== Project Cards ==================== */
 .project-card {
-  @apply relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.065] hover:shadow-cyan-950/40;
+  @apply relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/20 transition-all duration-300 hover:scale-[1.01] hover:border-cyan-300/30 hover:bg-white/[0.065] hover:shadow-cyan-950/40;
 }
 
 .project-card-shine {
@@ -69,7 +69,7 @@
 }
 
 .skill-card-enhanced {
-  @apply flex flex-col rounded-2xl border border-white/10 bg-white/[0.045] p-8 shadow-2xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-amber-200/30 hover:bg-white/[0.065];
+  @apply flex flex-col rounded-2xl border border-white/10 bg-white/[0.045] p-8 shadow-2xl shadow-black/20 transition-all duration-300 hover:scale-[1.01] hover:border-amber-200/30 hover:bg-white/[0.065];
 }
 
 .skill-icon-wrapper {
@@ -121,7 +121,11 @@
 }
 
 .experience-content {
-  @apply rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/20;
+  @apply rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/20 transition-all duration-300;
+}
+
+.experience-item-enhanced:hover .experience-content {
+  @apply border-cyan-300/30 bg-white/[0.06] shadow-cyan-950/40;
 }
 
 .experience-content ul {
