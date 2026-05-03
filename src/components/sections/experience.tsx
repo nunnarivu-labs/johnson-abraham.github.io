@@ -131,14 +131,13 @@ const ExperienceCard = ({
 );
 
 export const Experience = () => (
-  <section id="experience" className="py-20 md:py-32 relative overflow-hidden">
-    <div className="absolute inset-0 bg-linear-to-tl from-slate-900 via-slate-900 to-slate-800/50"></div>
+  <section id="experience" className="relative overflow-hidden py-20 md:py-32">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(20,184,166,0.12),transparent_30%),linear-gradient(225deg,#0b1020_0%,#070912_58%,#10131d_100%)]"></div>
     <div className="container mx-auto px-6 max-w-3xl relative z-10">
-      <div className="text-center mb-16 animate-on-scroll">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          Professional Experience
-        </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
+      <div className="mb-16 animate-on-scroll">
+        <p className="section-kicker">Career</p>
+        <h2 className="section-title">Professional Experience</h2>
+        <p className="section-copy">
           I've had the privilege of contributing to great teams and building
           enterprise-level software.
         </p>

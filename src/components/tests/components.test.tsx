@@ -19,9 +19,9 @@ describe('Header', () => {
       />,
     );
 
-    expect(screen.getByRole('banner')).toHaveClass('bg-slate-900/95');
+    expect(screen.getByRole('banner')).toHaveClass('bg-[#070912]/85');
     expect(screen.getByRole('link', { name: 'Projects' })).toHaveClass(
-      'text-sky-400',
+      'bg-white',
     );
 
     fireEvent.click(screen.getByRole('button', { name: 'Toggle menu' }));
@@ -34,15 +34,13 @@ describe('MobileMenu', () => {
   it('shows its active state and closes when a link is clicked', () => {
     const onClose = vi.fn();
 
-    render(
-      <MobileMenu open={true} activeSection="skills" onClose={onClose} />,
-    );
+    render(<MobileMenu open={true} activeSection="skills" onClose={onClose} />);
 
     expect(screen.getByRole('navigation').parentElement).toHaveClass(
       'opacity-100',
     );
     expect(screen.getByRole('link', { name: 'Skills' })).toHaveClass(
-      'text-sky-400',
+      'bg-white',
     );
 
     fireEvent.click(screen.getByRole('link', { name: 'About' }));

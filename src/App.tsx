@@ -23,7 +23,7 @@ export default function App() {
   useScrollAnimation();
 
   return (
-    <div className="bg-slate-900 text-slate-300 font-sans leading-relaxed">
+    <div className="min-h-screen overflow-x-hidden bg-[#070912] text-slate-300 font-sans leading-relaxed">
       <Header
         scrolled={scrolled}
         mobileMenuOpen={mobileMenuOpen}

@@ -38,21 +38,17 @@ const SkillCard = ({ icon: Icon, title, description }: Skill) => (
 );
 
 export const Skills = () => (
-  <section
-    id="skills"
-    className="py-20 md:py-32 bg-slate-950 section-pattern"
-  >
+  <section id="skills" className="section-shell bg-[#070912] py-20 md:py-32">
     <div className="container mx-auto px-6">
-      <div className="text-center mb-16 animate-on-scroll">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          My Technical Skills
-        </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-          I have a broad range of experience across the stack. Here are
-          some of the key technologies I work with.
+      <div className="mb-16 max-w-3xl animate-on-scroll">
+        <p className="section-kicker">Capabilities</p>
+        <h2 className="section-title">My Technical Skills</h2>
+        <p className="section-copy">
+          I have a broad range of experience across the stack. Here are some of
+          the key technologies I work with.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {skills.map((skill) => (
           <SkillCard key={skill.title} {...skill} />
         ))}

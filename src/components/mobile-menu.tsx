@@ -9,22 +9,22 @@ interface MobileMenuProps {
 export function MobileMenu({ open, activeSection, onClose }: MobileMenuProps) {
   return (
     <div
-      className={`md:hidden fixed inset-0 top-20 z-40 bg-slate-900/98 backdrop-blur-lg transition-all duration-300 ${
+      className={`md:hidden fixed inset-0 top-20 z-40 bg-[#070912]/95 backdrop-blur-xl transition-all duration-300 ${
         open
           ? 'opacity-100 pointer-events-auto'
           : 'opacity-0 pointer-events-none'
       }`}
     >
-      <nav className="flex flex-col items-center justify-center h-full space-y-8">
+      <nav className="flex h-full flex-col items-center justify-center space-y-5 px-6">
         {navLinks.map((link) => (
           <a
             key={link.href}
             href={link.href}
             onClick={onClose}
-            className={`text-2xl font-semibold transition-colors ${
+            className={`w-full max-w-xs rounded-xl border px-6 py-4 text-center text-xl font-semibold transition-colors ${
               activeSection === link.href.slice(1)
-                ? 'text-sky-400'
-                : 'text-white hover:text-sky-400'
+                ? 'border-white bg-white text-[#070912]'
+                : 'border-white/10 bg-white/[0.04] text-white hover:border-white/30'
             }`}
           >
             {link.label}

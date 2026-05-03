@@ -3,22 +3,20 @@ import { Github } from '../icons/github.tsx';
 import { LinkedIn } from '../icons/linkedIn.tsx';
 
 export const ContactFooter = () => (
-  <footer
-    id="contact"
-    className="bg-slate-950 py-20 text-center section-pattern"
-  >
+  <footer id="contact" className="section-shell bg-[#070912] py-20 text-center">
     <div className="container mx-auto px-6">
       <div className="animate-on-scroll">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
+        <p className="section-kicker justify-center">Contact</p>
+        <h2 className="section-title mx-auto">
           Thanks for visiting my portfolio.
         </h2>
-        <p className="mt-4 text-slate-400 max-w-xl mx-auto">
+        <p className="section-copy mx-auto max-w-xl">
           I'm always happy to connect and talk about technology.
         </p>
         <div className="mt-8">
           <a
             href="mailto:johnsonabraham@nunnarivulabs.in"
-            className="inline-flex items-center gap-2 bg-sky-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-sky-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-sky-500/25"
+            className="primary-button"
           >
             <Mail className="h-5 w-5" /> Send me an email
           </a>
@@ -28,6 +26,7 @@ export const ContactFooter = () => (
             href="https://github.com/johnson-abraham"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
             className="social-link-enhanced"
           >
             <Github />
@@ -36,6 +35,7 @@ export const ContactFooter = () => (
             href="https://www.linkedin.com/in/johnson-abraham/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             className="social-link-enhanced"
           >
             <LinkedIn />

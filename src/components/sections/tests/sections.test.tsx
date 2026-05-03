@@ -29,12 +29,11 @@ describe('About', () => {
     render(<About />);
 
     expect(
-      screen.getByRole('heading', { name: /about me/i }),
+      screen.getByRole('heading', { name: /engineering approach/i }),
     ).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: 'Johnson Abraham' })).toHaveAttribute(
-      'src',
-      expect.stringContaining('profile-photo'),
-    );
+    expect(
+      screen.getByRole('img', { name: 'Johnson Abraham' }),
+    ).toHaveAttribute('src', expect.stringContaining('profile-photo'));
   });
 });
 
@@ -45,15 +44,16 @@ describe('Projects', () => {
     expect(
       screen.getByRole('heading', { name: /featured projects/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText('Ishtar: AI Chat Application')).toBeInTheDocument();
-    expect(screen.getByText('Slate: Note-Taking App')).toBeInTheDocument();
+    expect(screen.getByText('Ishtar')).toBeInTheDocument();
+    expect(screen.getByText('AI Chat Application')).toBeInTheDocument();
+    expect(screen.getByText('Slate')).toBeInTheDocument();
+    expect(screen.getByText('Note-Taking App')).toBeInTheDocument();
+    expect(screen.getByText('The Daily Ledger')).toBeInTheDocument();
     expect(
-      screen.getByText(
-        'The Daily Ledger: High-Performance Analytics Dashboard',
-      ),
+      screen.getByText('High-Performance Analytics Dashboard'),
     ).toBeInTheDocument();
     expect(
-      screen.getAllByRole('link', { name: /view on github/i }),
+      screen.getAllByRole('link', { name: /open .* on github/i }),
     ).toHaveLength(3);
   });
 });

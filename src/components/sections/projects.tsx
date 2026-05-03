@@ -1,7 +1,7 @@
 import ishtarLogo from '../../assets/ishtar-logo.png';
 import slateLogo from '../../assets/slate-logo.png';
 import dailyLedgerLogo from '../../assets/the-daily-ledger-logo.png';
-import { Github } from '../../icons/github.tsx';
+import { ArrowUpRight } from 'lucide-react';
 
 interface Project {
   logo: string;
@@ -73,51 +73,56 @@ const ProjectCard = ({
   description,
   tags,
   githubUrl,
-}: Project) => (
-  <div className="project-card animate-on-scroll">
-    <div className="p-8 grow">
-      <div className="flex items-center gap-4 mb-4">
-        <img src={logo} alt={logoAlt} className="h-12 w-12 rounded-md" />
-        <h3 className="text-2xl font-bold text-white">{title}</h3>
-      </div>
-      <p className="text-slate-400 mb-6">{description}</p>
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span key={tag} className="tech-tag">
-            {tag}
-          </span>
-        ))}
+}: Project) => {
+  const [name, subtitle] = title.split(': ');
+
+  return (
+    <div className="project-card animate-on-scroll">
+      <div className="project-card-shine"></div>
+      <div className="grow p-7">
+        <div className="mb-6 flex items-start justify-between gap-4">
+          <img src={logo} alt={logoAlt} className="h-14 w-14 rounded-xl" />
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${title} on GitHub`}
+            className="rounded-md p-2 text-cyan-200/70 transition-colors hover:bg-cyan-200/10 hover:text-cyan-100"
+          >
+            <ArrowUpRight className="h-5 w-5" />
+          </a>
+        </div>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-amber-200/80">
+          {name}
+        </p>
+        <h3 className="mb-4 text-2xl font-bold leading-tight text-white">
+          {subtitle ?? title}
+        </h3>
+        <p className="mb-6 text-slate-400">{description}</p>
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span key={tag} className="tech-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
-    <div className="bg-slate-800 p-6 flex items-center justify-center">
-      <a
-        href={githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="project-button"
-      >
-        View on GitHub <Github classes="h-4 w-4" />
-      </a>
-    </div>
-  </div>
-);
+  );
+};
 
 export const Projects = () => (
-  <section
-    id="projects"
-    className="py-20 md:py-32 bg-slate-950 section-pattern"
-  >
+  <section id="projects" className="section-shell bg-[#070912] py-20 md:py-32">
     <div className="container mx-auto px-6">
-      <div className="text-center mb-16 animate-on-scroll">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          Featured Projects
-        </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
+      <div className="mb-16 max-w-3xl animate-on-scroll">
+        <p className="section-kicker">Selected builds</p>
+        <h2 className="section-title">Featured Projects</h2>
+        <p className="section-copy">
           A selection of my personal projects that showcase my skills in
           building full-stack applications from concept to deployment.
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 gap-12 justify-center">
+      <div className="grid gap-6 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
