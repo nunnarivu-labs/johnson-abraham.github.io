@@ -9,15 +9,15 @@ interface Skill {
 const skills: Skill[] = [
   {
     icon: Layers,
-    title: 'Frontend Development',
+    title: 'Frontend Engineering',
     description:
-      'JavaScript (TypeScript), React, Next.js, Redux, Recoil, Jotai, TanStack Libraries, React Router, MUI, Tailwind CSS, Shadcn, Jest, Testing Library',
+      'JavaScript, TypeScript, React, Next.js, TanStack Libraries, React Router, Redux, Recoil, Jotai, MUI, Tailwind CSS, Shadcn, Jest, Testing Library',
   },
   {
     icon: Code,
-    title: 'Backend Development',
+    title: 'API & Backend Depth',
     description:
-      'Java, Spring, Spring Boot, Node.js, Serverless Architecture, API Development, Drizzle ORM',
+      'Node.js, Serverless Architecture, API Development, Drizzle ORM, Java, Spring, Spring Boot',
   },
   {
     icon: Database,
@@ -44,8 +44,9 @@ export const Skills = () => (
         <p className="section-kicker">Capabilities</p>
         <h2 className="section-title">My Technical Skills</h2>
         <p className="section-copy">
-          I have a broad range of experience across the stack. Here are some of
-          the key technologies I work with.
+          My work is strongest on the JavaScript, TypeScript, and React side,
+          with enough backend and cloud depth to ship complete product
+          experiences.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

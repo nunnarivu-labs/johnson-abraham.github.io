@@ -1,0 +1,80 @@
+<svg
+  width="1200"
+  height="630"
+  viewBox="0 0 1200 630"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect width="1200" height="630" fill="#070912" />
+  <path d="M0 0H1200V630H0V0Z" fill="url(#bg)" />
+  <path d="M0 408L1200 210V630H0V408Z" fill="#0E1726" opacity="0.82" />
+  <circle cx="960" cy="138" r="260" fill="#22D3EE" opacity="0.16" />
+  <circle cx="216" cy="520" r="280" fill="#F59E0B" opacity="0.12" />
+  <rect x="78" y="82" width="72" height="72" rx="12" fill="white" />
+  <text
+    x="114"
+    y="128"
+    text-anchor="middle"
+    fill="#070912"
+    font-family="Inter, Arial, sans-serif"
+    font-size="28"
+    font-weight="800"
+  >
+    JA
+  </text>
+  <text
+    x="78"
+    y="248"
+    fill="white"
+    font-family="Inter, Arial, sans-serif"
+    font-size="76"
+    font-weight="900"
+    letter-spacing="-2"
+  >
+    Johnson Abraham
+  </text>
+  <text
+    x="78"
+    y="328"
+    fill="#CBD5E1"
+    font-family="Inter, Arial, sans-serif"
+    font-size="38"
+    font-weight="600"
+  >
+    Frontend-Heavy Full-Stack Engineer
+  </text>
+  <text
+    x="78"
+    y="402"
+    fill="#94A3B8"
+    font-family="Inter, Arial, sans-serif"
+    font-size="31"
+    font-weight="500"
+  >
+    Secure, scalable, user-centric web applications
+  </text>
+  <text
+    x="78"
+    y="476"
+    fill="#67E8F9"
+    font-family="Inter, Arial, sans-serif"
+    font-size="27"
+    font-weight="700"
+  >
+    JavaScript · TypeScript · React
+  </text>
+  <defs>
+    <radialGradient
+      id="bg"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(950 128) rotate(139.4) scale(784 842)"
+    >
+      <stop stop-color="#164E63" />
+      <stop offset="0.48" stop-color="#070912" />
+      <stop offset="1" stop-color="#111827" />
+    </radialGradient>
+  </defs>
+</svg>

@@ -18,9 +18,10 @@ export const About = () => (
           <div className="max-w-3xl space-y-4 text-lg text-slate-400">
             <p>
               I build software that is fast, scalable, and enjoyable to use. As
-              a Staff Software Engineer, my career has explored two areas: the
-              reliable, enterprise-level backends of the Java ecosystem and the
-              dynamic, user-focused frontends of modern TypeScript and React.
+              a Staff Software Engineer, my strongest focus is frontend
+              engineering: shaping responsive interfaces, designing maintainable
+              React architecture, and turning complex workflows into clear user
+              experiences.
             </p>
             <p>
               What truly excites me is solving puzzles with a big impact. I
@@ -31,10 +32,10 @@ export const About = () => (
               but also makes life easier for my entire engineering team.
             </p>
             <p>
-              I believe that the best leaders are also mentors. A significant
-              part of my role is to share my knowledge, foster a culture of
-              technical excellence, and introduce innovations that enable the
-              team to grow.
+              My backend experience in Java, Spring, APIs, and cloud systems
+              gives me the context to work across the stack, but my day-to-day
+              craft is centered on JavaScript, TypeScript, React, performance,
+              and product-quality UI delivery.
             </p>
           </div>
         </div>

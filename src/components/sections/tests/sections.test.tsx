@@ -65,8 +65,8 @@ describe('Skills', () => {
     expect(
       screen.getByRole('heading', { name: /my technical skills/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText('Frontend Development')).toBeInTheDocument();
-    expect(screen.getByText('Backend Development')).toBeInTheDocument();
+    expect(screen.getByText('Frontend Engineering')).toBeInTheDocument();
+    expect(screen.getByText('API & Backend Depth')).toBeInTheDocument();
     expect(screen.getByText('Cloud, Databases & Tools')).toBeInTheDocument();
   });
 });

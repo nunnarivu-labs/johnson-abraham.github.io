@@ -19,10 +19,10 @@ export const Intro = () => (
           I build secure, scalable, and user-centric web applications.
         </h1>
         <p className="hero-fade-in hero-delay-1 mt-6 max-w-2xl text-lg text-slate-300 md:text-xl">
-          {`With ${getExperience()} years of experience as a Full-Stack Engineer, I specialize
-                in the Java/Spring and TypeScript/React ecosystems. I architect
-                and deploy scalable, cloud-native applications, from robust
-                serverless backends to dynamic, responsive frontends.`}
+          {`With ${getExperience()} years of experience, I specialize in building
+                frontend-heavy products with JavaScript, TypeScript, React, and
+                modern UI architecture. I also bring full-stack depth from API,
+                cloud, and backend systems when the product needs it.`}
         </p>
         <div className="hero-fade-in hero-delay-2 mt-10 flex flex-col gap-4 sm:flex-row">
           <a className="primary-button group" href={PROJECTS_HREF}>
